@@ -17,7 +17,8 @@ use App\Http\Controllers\MollieController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Mollie Payment
 Route::get('mollie-payment-success',[MollieController::Class, 'paymentSuccess'])->name('mollie.payment.success');
